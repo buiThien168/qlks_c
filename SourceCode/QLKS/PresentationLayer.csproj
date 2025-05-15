@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D79594ED-40E6-4283-B706-D764504CF233}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PresentationLayer</RootNamespace>
+    <AssemblyName>PresentationLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BieuDoKhachDen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BieuDoKhachDen.Designer.cs">
+      <DependentUpon>BieuDoKhachDen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietDoanhThu.Designer.cs">
+      <DependentUpon>ChiTietDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietKhachHang.Designer.cs">
+      <DependentUpon>ChiTietKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControllerSV.cs" />
+    <Compile Include="CSS.cs" />
+    <Compile Include="CustomePhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomePhong.Designer.cs">
+      <DependentUpon>CustomePhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSachDatPhongTheoKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhSachDatPhongTheoKhachHang.Designer.cs">
+      <DependentUpon>DanhSachDatPhongTheoKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSachKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhSachKhachHang.Designer.cs">
+      <DependentUpon>DanhSachKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatPhong.Designer.cs">
+      <DependentUpon>DatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DichVuvaLoaiDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DichVuvaLoaiDichVu.Designer.cs">
+      <DependentUpon>DichVuvaLoaiDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoanhThuGanDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoanhThuGanDay.Designer.cs">
+      <DependentUpon>DoanhThuGanDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoaiPhong.Designer.cs">
+      <DependentUpon>LoaiPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxDS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxDS.Designer.cs">
+      <DependentUpon>MessageBoxDS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuSuDungDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuSuDungDichVu.Designer.cs">
+      <DependentUpon>PhieuSuDungDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuThuePhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuThuePhong.Designer.cs">
+      <DependentUpon>PhieuThuePhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickDateTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PickDateTime.Designer.cs">
+      <DependentUpon>PickDateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanlyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanlyTaiKhoan.Designer.cs">
+      <DependentUpon>QuanlyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIZE.cs" />
+    <Compile Include="SoDoKhachSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoDoKhachSan.Designer.cs">
+      <DependentUpon>SoDoKhachSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoLuongDVthem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoLuongDVthem.Designer.cs">
+      <DependentUpon>SoLuongDVthem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThayDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThayDoiMatKhau.Designer.cs">
+      <DependentUpon>ThayDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimPhongTrong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimPhongTrong.Designer.cs">
+      <DependentUpon>TimPhongTrong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TraPhong.Designer.cs">
+      <DependentUpon>TraPhong.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BieuDoKhachDen.resx">
+      <DependentUpon>BieuDoKhachDen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietDoanhThu.resx">
+      <DependentUpon>ChiTietDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietKhachHang.resx">
+      <DependentUpon>ChiTietKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomePhong.resx">
+      <DependentUpon>CustomePhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhSachDatPhongTheoKhachHang.resx">
+      <DependentUpon>DanhSachDatPhongTheoKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhSachKhachHang.resx">
+      <DependentUpon>DanhSachKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatPhong.resx">
+      <DependentUpon>DatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DichVuvaLoaiDichVu.resx">
+      <DependentUpon>DichVuvaLoaiDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoanhThuGanDay.resx">
+      <DependentUpon>DoanhThuGanDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoaiPhong.resx">
+      <DependentUpon>LoaiPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxDS.resx">
+      <DependentUpon>MessageBoxDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuSuDungDichVu.resx">
+      <DependentUpon>PhieuSuDungDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuThuePhong.resx">
+      <DependentUpon>PhieuThuePhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanlyTaiKhoan.resx">
+      <DependentUpon>QuanlyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoDoKhachSan.resx">
+      <DependentUpon>SoDoKhachSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoLuongDVthem.resx">
+      <DependentUpon>SoLuongDVthem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThayDoiMatKhau.resx">
+      <DependentUpon>ThayDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimPhongTrong.resx">
+      <DependentUpon>TimPhongTrong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraPhong.resx">
+      <DependentUpon>TraPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{cc8d9b9a-ae33-4c8d-ac11-17621ccd0e97}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataTranferObject\DataTranferObject.csproj">
+      <Project>{b5549506-6209-45a7-846e-6cd2ccde2c82}</Project>
+      <Name>DataTranferObject</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account-card-details.png" />
+    <None Include="Resources\account-multiple.png" />
+    <None Include="Resources\account-multiple1.png" />
+    <None Include="Resources\account-multiple-plus.png" />
+    <None Include="Resources\arrow-down-bold-circle-outline.png" />
+    <None Include="Resources\av-timer.png" />
+    <None Include="Resources\calculator.png" />
+    <None Include="Resources\calculator-white.png" />
+    <None Include="Resources\calendar-clock.png" />
+    <None Include="Resources\calendar-multiple-check.png" />
+    <None Include="Resources\content-save %281%29.png" />
+    <None Include="Resources\content-save %283%29.png" />
+    <None Include="Resources\content-save.png" />
+    <None Include="Resources\content-save-wwhile.png" />
+    <None Include="Resources\chevron-left.png" />
+    <None Include="Resources\chevron-right.png" />
+    <None Include="Resources\delete-forever.png" />
+    <None Include="Resources\eye.png" />
+    <None Include="Resources\eye-off.png" />
+    <None Include="Resources\f639e29ce6a6ac1da59a6c1456bef6cd_calculator-icon-clip-art-free-calculator-icon-vector-clipart_285-298.png" />
+    <None Include="Resources\fail.png" />
+    <None Include="Resources\food-fork-drink.png" />
+    <None Include="Resources\food-fork-drink1.png" />
+    <None Include="Resources\forum.png" />
+    <None Include="Resources\hotel.png" />
+    <None Include="Resources\ic_close_black_48dp.png" />
+    <None Include="Resources\ic_mode_edit.bmp" />
+    <None Include="Resources\ic_mode_edit_white_18dp_1x.png" />
+    <None Include="Resources\ic_replay_black_48dp.png" />
+    <None Include="Resources\library-plus.png" />
+    <None Include="Resources\loadding.gif" />
+    <None Include="Resources\loadding.png" />
+    <None Include="Resources\loadding_larg.gif" />
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus-box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-in-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page-first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page-last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warnig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_cash-multiple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_cash-usd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_chart-bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_close-circle-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_food.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_home-modern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_cash-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_cash-multiple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_cash-usd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_close-circle-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_food.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_home-modern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_chart-bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_account-multiple-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_account-multiple-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_in-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_in-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_check-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_check-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_people-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_people-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_folder-account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_lock-reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_folder-account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_lock-reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_cash-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard-text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account-card-details-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-clock-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\replay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-multiple.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
