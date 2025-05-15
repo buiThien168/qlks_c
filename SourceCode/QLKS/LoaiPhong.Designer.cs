@@ -293,6 +293,7 @@
             this.gridGia.RowHeadersWidth = 51;
             this.gridGia.Size = new System.Drawing.Size(664, 316);
             this.gridGia.TabIndex = 1;
+            this.gridGia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridGia_CellClick);
             // 
             // panel5
             // 
