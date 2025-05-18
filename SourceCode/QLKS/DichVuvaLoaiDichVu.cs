@@ -194,5 +194,51 @@ namespace PresentationLayer
 				m.ShowDialog();
 			}
 		}
-	}
+
+        private void btnXoaLoaiDichVu_Click(object sender, EventArgs e)
+        {
+            LoaiDichVuBUS loaiDichVuBUS = new LoaiDichVuBUS();
+            if (loaiDichVuBUS.XoaLDV(gridLoai.CurrentRow.Cells[0].Value.ToString()))
+            {
+                MessageBoxDS m = new MessageBoxDS();
+                MessageBoxDS.thongbao = "Xóa loại dịch vụ thành công";
+                MessageBoxDS.maHinh = 1;
+                m.ShowDialog();
+            }
+            else
+            {
+                MessageBoxDS m = new MessageBoxDS();
+                MessageBoxDS.thongbao = "Xóa loại dịch vụ thất bại";
+                MessageBoxDS.maHinh = 3;
+                m.ShowDialog();
+            }
+            DichVuvaLoaiDichVu_Load(sender, e);
+        }
+
+        private void btnXoaDV_Click(object sender, EventArgs e)
+        {
+            DichVuDTO dichVuDTO = new DichVuDTO();
+            dichVuDTO._Ma = int.Parse(gridDV.CurrentRow.Cells[0].Value.ToString());
+            dichVuDTO._Ten = txtTenDV.Text;
+            dichVuDTO._Donvitinh = txtDonvi.Text;
+            dichVuDTO._Maloaidichvu = int.Parse(cbmLoai.SelectedValue.ToString());
+            dichVuDTO._Gia = float.Parse(txtGia.Text);
+            DichVuBUS dichVuBUS = new DichVuBUS();
+            if (dichVuBUS.XoaDV(dichVuDTO))
+            {
+                MessageBoxDS m = new MessageBoxDS();
+                MessageBoxDS.thongbao = "Xóa dịch vụ thành công";
+                MessageBoxDS.maHinh = 1;
+                m.ShowDialog();
+                DichVuvaLoaiDichVu_Load(sender, e);
+            }
+            else
+            {
+                MessageBoxDS m = new MessageBoxDS();
+                MessageBoxDS.thongbao = "Xóa dịch vụ thất bại";
+                MessageBoxDS.maHinh = 3;
+                m.ShowDialog();
+            }
+        }
+    }
 }

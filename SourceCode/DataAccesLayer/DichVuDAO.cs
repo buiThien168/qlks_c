@@ -62,5 +62,19 @@ namespace DataAccesLayer
 				return false;
 			}
 		}
-	}
+
+        public bool XoaDV(DichVuDTO dichVuDTO)
+        {
+            string query = "DELETE FROM Dichvu where Ma = " + dichVuDTO._Ma + "";
+            try
+            {
+                dataProvider.ExecuteUpdateQuery(query);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+    }
 }

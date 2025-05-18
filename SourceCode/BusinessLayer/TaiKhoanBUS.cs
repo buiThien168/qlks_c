@@ -46,5 +46,10 @@ namespace BusinessLayer
 		{
 			return taiKhoanDAO.ResetMK(ma);
 		}
-	}
+
+        public DataTable CheckRoleTK(string ma, string tk)
+        {
+            return taiKhoanDAO.CheckRoleTK(ma,tk);
+        }
+    }
 }

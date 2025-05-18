@@ -32,5 +32,9 @@ namespace BusinessLayer
 		{
 			return dichVuDAO.ThemDV(dichVuDTO);
 		}
-	}
+        public bool XoaDV(DichVuDTO dichVuDTO)
+        {
+            return dichVuDAO.XoaDV(dichVuDTO);
+        }
+    }
 }

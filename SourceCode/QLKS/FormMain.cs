@@ -1,4 +1,5 @@
-﻿using DataTranferObject;
+﻿using BusinessLayer;
+using DataTranferObject;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -59,12 +60,30 @@ namespace PresentationLayer
 
         //Tai khoản đăng nhập
         TaiKhoanDTO taiKhoan = new TaiKhoanDTO();
-        
+        int checkRole = 1;
+
+        public void getRole(string ma,string tk)
+        {
+            TaiKhoanBUS taiKhoanBUS = new TaiKhoanBUS();
+            var dataCheck =  taiKhoanBUS.CheckRoleTK(ma, tk);
+            try
+            {
+                checkRole = int.Parse(dataCheck.Rows[0]["Maloainhanvien"].ToString());
+            }
+            catch
+            {
+                checkRole = 1;
+            }
+            
+        }
+
         public FormMain(ControllerSV objSV)
         {
 			taiKhoan = objSV.taiKhoan;
-            InitializeComponent();
 
+            getRole(taiKhoan.Ma.ToString(), taiKhoan.Tendangnhap.ToString());
+            InitializeComponent();
+            phanQuyen();
             cbbChangeTheme.SelectedIndex = 0;
             ChangeTheme();
 
@@ -102,8 +121,8 @@ namespace PresentationLayer
             btnQuanLyTaiKhoan.MouseHover += button_MouseHover;
             btnQuanLyTaiKhoan.MouseLeave += button_MouseLeave;
             btnQuanLyTaiKhoan.MouseUp += BtnQuanLyTaiKhoan_MouseUp;
-            
-            
+
+
             // sự kiện dropdow panel cho group button
             btnKhachHang.MouseDown += Button_MouseDown;
             btnSoDoKhachSan.MouseDown += Button_MouseDown;
@@ -124,10 +143,10 @@ namespace PresentationLayer
             plbDangXuat = lbDangXuat;
 
             //taikhoan
-            //lbTaiKhoan.Text = objSV.taiKhoan.Tendangnhap;
+            lbTaiKhoan.Text = "Chào: "+objSV.taiKhoan.Tendangnhap;
             //callBtnMouseEvent = btnSoDoKhachSan_MouseUp;
             //CallSodokhEvet += btnSoDoKhachSan_MouseUp;
-            //CallSodokhEvet(this, new MouseEventArgs(btnSoDoKhachSan, 1, 0, 0, 0));
+            ////CallSodokhEvet(this, new MouseEventArgs(btnSoDoKhachSan, 1, 0, 0, 0));
             btnSoDoKhachSan_MouseUp(btnSoDoKhachSan, new MouseEventArgs(MouseButtons, 1, 1, 1, 1));
         }
 
@@ -204,19 +223,20 @@ namespace PresentationLayer
 
         private void BtnPhanTichBieuDo_MouseUp(object sender, MouseEventArgs e)
         {
-            setColorActiveForButton((Button)sender);
+                setColorActiveForButton((Button)sender);
 
-            if (bieuDoKhachDen == null)
-            {
-                bieuDoKhachDen = new BieuDoKhachDen();
-                bieuDoKhachDen.Dock = DockStyle.Fill;
-                bieuDoKhachDen.TopLevel = false;
-                pnBody.Controls.Add(bieuDoKhachDen);
+                if (bieuDoKhachDen == null)
+                {
+                    bieuDoKhachDen = new BieuDoKhachDen();
+                    bieuDoKhachDen.Dock = DockStyle.Fill;
+                    bieuDoKhachDen.TopLevel = false;
+                    pnBody.Controls.Add(bieuDoKhachDen);
 
-                bieuDoKhachDen.Show();
-            }
+                    bieuDoKhachDen.Show();
+                }
 
-            onlyShowOneFormOnPannelBody(bieuDoKhachDen);
+                onlyShowOneFormOnPannelBody(bieuDoKhachDen);
+            
         }
 
         private void BtnChiTietDoanhThu_MouseUp(object sender, MouseEventArgs e)
@@ -461,18 +481,18 @@ namespace PresentationLayer
         // phân quyền cho người dùng
         private void phanQuyen()
         {
-            //if(nhanVien.MALOAINHANVIEN == 2)
-            //{
-            //    btnDoanhThu.Enabled = false;
-            //    //btnThongKe.Enabled = false;
-            //    btnQuanLyTaiKhoan.Enabled = false;
-            //}
-            //else
-            //{
-            //    btnDoanhThu.Enabled = true;
-            //    //btnThongKe.Enabled = true;
-            //}
-            
+            if (checkRole == 2)
+            {
+                btnDoanhThu.Enabled = false;
+                btnQuanLyTaiKhoan.Enabled = false;
+            }
+            else if (checkRole == 1) {
+                btnDoanhThu.Enabled = false;
+                btnDoanhThu.Enabled = false;
+                btnDoanhThuGanDay.Enabled = false;
+                
+            }
+
         }
 
         public void lbDangXuat_Click(object sender, EventArgs e)

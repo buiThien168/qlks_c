@@ -34,7 +34,7 @@ namespace DataAccesLayer
 
 		public bool ThemLDV(string ten)
 		{
-			string query = "insert into Loaidichvu(Ten) Values ("+ten+")";
+			string query = "insert into Loaidichvu(Ten) Values (N'" + ten+"')";
 			try
 			{
 				dataProvider.ExecuteUpdateQuery(query);
@@ -45,5 +45,19 @@ namespace DataAccesLayer
 				return false;
 			}
 		}
-	}
+
+        public bool XoaLDV(string ma)
+        {
+            string query = "DELETE FROM Loaidichvu where Ma = " + ma + "";
+            try
+            {
+                dataProvider.ExecuteUpdateQuery(query);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+    }
 }

@@ -26,5 +26,9 @@ namespace BusinessLayer
 		{
 			return loaiDichVuDAO.ThemLDV(ten);
 		}
-	}
+        public bool XoaLDV(string ma)
+        {
+            return loaiDichVuDAO.XoaLDV(ma);
+        }
+    }
 }

@@ -19,8 +19,16 @@ namespace DataAccesLayer
 			
 			return tb;
 		}
+        public DataTable CheckRoleTK(string ma, string tk)
+        {
+            string query = "Select Maloainhanvien From Nhanvien where Mataikhoan=" + ma+"";
+            DataTable tb = new DataTable();
+            tb = dataProvider.ExecuteQuery_DataTble(query);
 
-		public TaiKhoanDTO KiemtraDangnhap(TaiKhoanDTO taiKhoan)
+            return tb;
+        }
+
+        public TaiKhoanDTO KiemtraDangnhap(TaiKhoanDTO taiKhoan)
 		{
 			string query = "Select * From Taikhoan Where Tendangnhap = '"+taiKhoan.Tendangnhap+"' and Matkhau = '"+taiKhoan.Matkhau+"'";
 			DataTable tb = new DataTable();
