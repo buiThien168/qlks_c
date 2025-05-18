@@ -151,7 +151,7 @@ namespace PresentationLayer
 
 		private void KiemtraDangnhap()
 		{
-			TaiKhoanDTO taiKhoan = new TaiKhoanDTO();
+            TaiKhoanDTO taiKhoan = new TaiKhoanDTO();
 			taiKhoan.Ma = 1;
 			taiKhoan.Tendangnhap = txtTaiKhoan.Text;
 			taiKhoan.Matkhau = txtMatKhau.Text;

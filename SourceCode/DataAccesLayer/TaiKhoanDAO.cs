@@ -78,8 +78,8 @@ namespace DataAccesLayer
 
 		public string ThemTaikhoan(string tenTK)
 		{
-			string query = "insert into Taikhoan(Tendangnhap, Matkhau) Values('"+ tenTK + "','123')";
-			try
+			string query = "INSERT INTO Taikhoan(Tendangnhap, Matkhau) Values('" + tenTK + "','123')";
+            try
 			{
 				dataProvider.ExecuteUpdateQuery(query);
 				string query1 = "select max(Ma) from Taikhoan";

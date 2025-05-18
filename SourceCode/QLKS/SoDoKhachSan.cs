@@ -42,7 +42,7 @@ namespace PresentationLayer
 
         public void LoadPhong()
         {
-            flowBody.Controls.Clear();
+           flowBody.Controls.Clear();
             PhongBUS phongBUS = new PhongBUS();
             PhongDTO[] phongs = phongBUS.LayDanhSachPhong();
 
@@ -55,6 +55,13 @@ namespace PresentationLayer
             int j, coTrongPhieuThuePhong = 0;
             int numberPhong = phongBUS.LaySoLuongPhongLonNhatTrongCacTang();
             int with_sizeCustomePhong = flowBody.Size.Width / numberPhong - numberPhong-1;
+            
+            int countPhongTrong = 0;
+            int TongPhong = phongs.Length;
+            int Dango = 0;
+            int ChoPhong = 0;
+            int QuaHan = 0;
+
 
             for (i = 0; i < phongs.Length; i++)
             {
@@ -63,7 +70,7 @@ namespace PresentationLayer
                 customePhong.Size = new Size(with_sizeCustomePhong, customePhong.Size.Height);
 
                 coTrongPhieuThuePhong = 0;
-
+                
                 for(j = 0; j < phieuThuePhongs.Length; j++)
                 {
                     if(phongs[i].Ma == phieuThuePhongs[j].MaPhong)
@@ -73,6 +80,7 @@ namespace PresentationLayer
                         if (phieuThuePhongs[j].TrangThai == 1)
                         // khách hàng chưa nhận phòng
                         {
+                            ChoPhong++;
                             PhieuThuePhongDTO phieuThuePhongKiemTra = phieuThuePhongBUS.CoPhaiPhongCoNguoiDangO(phongs[i].Ma);
                             if (phieuThuePhongKiemTra != null)
                             {
@@ -91,6 +99,7 @@ namespace PresentationLayer
                                 int time = (int)(DateTime.Now - phieuThuePhongKiemTra.ThoiGianTraPhong).TotalMinutes;
                                 if (time > 0)
                                 {
+                                    QuaHan++;
                                     if (time < 60) // nhỏ hơn 60 phút
                                     {
                                         strtime = time + " phút ";
@@ -123,6 +132,7 @@ namespace PresentationLayer
                         else if (phieuThuePhongs[j].TrangThai == 2)
                         // khách hàng đã nhận phòng
                         {
+                            Dango++;
                             string strtime = String.Format("{0:MM/dd/yyyy HH:mm}", phieuThuePhongs[j].ThoiGianTraPhong);
                             KhachHangDTO khachHang = khachHangBUS.LayKhachHangCoMaSo(phieuThuePhongs[j].MaKhachHang);
                             string tenKhachHang = "";
@@ -163,7 +173,19 @@ namespace PresentationLayer
                 {
                     customePhong.ThayDoiTrangThaiTrong();
                 }
-
+                if (phieuThuePhongs.Length == 0)
+                {
+                    countPhongTrong = TongPhong;
+                }
+                else
+                {
+                    countPhongTrong = TongPhong-Dango- ChoPhong-QuaHan;
+                }
+                btnPhongTrong.Text = countPhongTrong.ToString() + " Trống";
+                btnTongSoPhong.Text = TongPhong.ToString() + " Phòng";
+                btnPhongDangO.Text = Dango.ToString() + " Đang ở";
+                btnPhongChoKhach.Text = ChoPhong.ToString() + " Chờ";
+                btnQuaHan.Text = QuaHan.ToString() + " Quá hạn";
                 customePhong.EventDatPhong += CustomePhong_EventDatPhong;
                 customePhong.EventNhanPhong += CustomePhong_EventNhanPhong;
                 customePhong.EventThanhToanPhong += CustomePhong_EventThanhToanPhong;

@@ -17,6 +17,10 @@ namespace BusinessLayer
         {
             return phongDAO.LayDanhSachPhong();
         }
+        public GiaPhongDTO[] LayDanhSachGiaPhong()
+        {
+            return phongDAO.LayDanhSachGiaPhong();
+        }
 
         public int LaySoLuongPhongLonNhatTrongCacTang()
         {
@@ -47,5 +51,44 @@ namespace BusinessLayer
 		{
 			return phongDAO.LayLoaiDangKy(maLoaiDangKy);
 		}
-	}
+
+		public DataTable LoadLoaiPhong()
+		{
+			return phongDAO.LoadLoaiPhong();
+
+        }
+        public DataTable LoadLoaiGiaPhongPhong()
+		{
+			return phongDAO.LoadLoaiGiaPhongPhong();
+
+        }
+        public bool ThemPhong(PhongDTO phong)
+        {
+            return phongDAO.CapnhatPhong(phong);
+        } 
+        public bool ThemGiaPhong(GiaPhongDTO phong)
+        {
+            return phongDAO.ThemGiaPhong(phong);
+        }
+        public bool UpdatePhong(PhongDTO phong)
+        {
+            return phongDAO.UpdatePhong(phong);
+        } 
+        public bool UpdateGiaPhong(GiaPhongDTO phong)
+        {
+            return phongDAO.UpdateGiaPhong(phong);
+        }
+        public bool XoaPhong(PhongDTO phong)
+        {
+            return phongDAO.XoaPhong(phong);
+        }
+        public bool XoaGiaPhong(GiaPhongDTO phong)
+        {
+            return phongDAO.XoaGiaPhong(phong);
+        }
+        public bool CheckGia(GiaPhongDTO phong)
+        {
+            return phongDAO.CheckGia(phong);
+        }
+    }
 }

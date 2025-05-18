@@ -47,7 +47,7 @@ namespace DataAccesLayer
 
 		public bool LuuHoaDon(HoaDonDTO hoaDonDTO)
 		{
-			string query = "INSERT INTO Hoadon(Maphieuthuephong,Manhanvienlap,Ngaytao,Tongtien,Ghichu) " +
+			string query = "INSERT INTO Hoadonthuephong(Maphieuthuephong,Manhanvienlap,Ngaytao,Tongtien,Ghichu) " +
 				"VALUES (" + hoaDonDTO.Maphieuthuephong + "," + hoaDonDTO.Manhanvienlap +
 				",'" + hoaDonDTO.Ngaytao + "'," + hoaDonDTO.Tongtien + ",N'" + hoaDonDTO.Ghichu +"')";
 			try

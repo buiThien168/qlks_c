@@ -35,11 +35,14 @@
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnRefesh = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.cbbMonth = new System.Windows.Forms.ComboBox();
             this.btnXem = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cbbYear = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -49,9 +52,6 @@
             this.chartLuotKhach = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.backgroundWorkerApp = new System.ComponentModel.BackgroundWorker();
             this.errorProviderApp = new System.Windows.Forms.ErrorProvider(this.components);
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnRefesh = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -74,15 +74,47 @@
             this.panel2.Size = new System.Drawing.Size(835, 40);
             this.panel2.TabIndex = 3;
             // 
+            // btnRefesh
+            // 
+            this.btnRefesh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRefesh.FlatAppearance.BorderSize = 0;
+            this.btnRefesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefesh.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefesh.ForeColor = System.Drawing.Color.White;
+            this.btnRefesh.Image = global::PresentationLayer.Properties.Resources.replay;
+            this.btnRefesh.Location = new System.Drawing.Point(186, 3);
+            this.btnRefesh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(31, 33);
+            this.btnRefesh.TabIndex = 2;
+            this.btnRefesh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnRefesh.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::PresentationLayer.Properties.Resources.dark_chart_bar;
+            this.button1.Location = new System.Drawing.Point(4, 3);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 33);
+            this.button1.TabIndex = 1;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(41, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 20);
+            this.label1.Size = new System.Drawing.Size(171, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Biểu đồ khách đến";
             // 
@@ -108,7 +140,7 @@
             this.label4.Location = new System.Drawing.Point(244, 14);
             this.label4.Margin = new System.Windows.Forms.Padding(1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 18);
+            this.label4.Size = new System.Drawing.Size(55, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "tháng:";
             // 
@@ -132,7 +164,7 @@
             this.cbbMonth.Margin = new System.Windows.Forms.Padding(1);
             this.cbbMonth.MaxLength = 2;
             this.cbbMonth.Name = "cbbMonth";
-            this.cbbMonth.Size = new System.Drawing.Size(45, 26);
+            this.cbbMonth.Size = new System.Drawing.Size(45, 28);
             this.cbbMonth.TabIndex = 4;
             this.cbbMonth.TextChanged += new System.EventHandler(this.cbbMonth_TextChanged);
             this.cbbMonth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbbMonth_KeyPress);
@@ -143,7 +175,7 @@
             this.btnXem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(30)))), ((int)(((byte)(163)))));
             this.btnXem.FlatAppearance.BorderSize = 0;
             this.btnXem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXem.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnXem.Location = new System.Drawing.Point(382, 12);
             this.btnXem.Name = "btnXem";
@@ -153,30 +185,56 @@
             this.btnXem.UseVisualStyleBackColor = false;
             this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
+            // button2
+            // 
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::PresentationLayer.Properties.Resources.calendar_clock;
+            this.button2.Location = new System.Drawing.Point(4, 3);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(52, 47);
+            this.button2.TabIndex = 2;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(61, 14);
             this.label2.Margin = new System.Windows.Forms.Padding(1);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 18);
+            this.label2.Size = new System.Drawing.Size(90, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Chọn năm:";
             // 
             // cbbYear
             // 
             this.cbbYear.FormattingEnabled = true;
-            this.cbbYear.ItemHeight = 18;
+            this.cbbYear.ItemHeight = 20;
             this.cbbYear.Items.AddRange(new object[] {
-            "2015",
             "2016",
             "2017",
-            "2018"});
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026",
+            "2027",
+            "2028"});
             this.cbbYear.Location = new System.Drawing.Point(151, 11);
             this.cbbYear.Margin = new System.Windows.Forms.Padding(1);
             this.cbbYear.MaxLength = 4;
             this.cbbYear.Name = "cbbYear";
-            this.cbbYear.Size = new System.Drawing.Size(75, 26);
+            this.cbbYear.Size = new System.Drawing.Size(75, 28);
             this.cbbYear.TabIndex = 0;
             this.cbbYear.TextChanged += new System.EventHandler(this.cbbYear_TextChanged);
             this.cbbYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbbYear_KeyPress);
@@ -225,7 +283,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(331, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 18);
+            this.label3.Size = new System.Drawing.Size(232, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Biểu đồ lượt khách đến chekin";
             // 
@@ -266,65 +324,16 @@
             // 
             this.errorProviderApp.ContainerControl = this;
             // 
-            // button2
-            // 
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Noto Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::PresentationLayer.Properties.Resources.calendar_clock;
-            this.button2.Location = new System.Drawing.Point(4, 3);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(52, 47);
-            this.button2.TabIndex = 2;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btnRefesh
-            // 
-            this.btnRefesh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRefesh.FlatAppearance.BorderSize = 0;
-            this.btnRefesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefesh.Font = new System.Drawing.Font("Noto Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefesh.ForeColor = System.Drawing.Color.White;
-            this.btnRefesh.Image = global::PresentationLayer.Properties.Resources.replay;
-            this.btnRefesh.Location = new System.Drawing.Point(186, 3);
-            this.btnRefesh.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(31, 33);
-            this.btnRefesh.TabIndex = 2;
-            this.btnRefesh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnRefesh.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Noto Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::PresentationLayer.Properties.Resources.dark_chart_bar;
-            this.button1.Location = new System.Drawing.Point(4, 3);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 33);
-            this.button1.TabIndex = 1;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // BieuDoKhachDen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(835, 640);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BieuDoKhachDen";

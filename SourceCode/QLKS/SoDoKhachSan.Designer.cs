@@ -65,7 +65,7 @@
             this.btnRefesh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnRefesh.FlatAppearance.BorderSize = 0;
             this.btnRefesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefesh.Font = new System.Drawing.Font("Noto Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefesh.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefesh.ForeColor = System.Drawing.Color.White;
             this.btnRefesh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefesh.Image")));
             this.btnRefesh.Location = new System.Drawing.Point(178, 6);
@@ -81,7 +81,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Noto Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(11, 6);
@@ -94,11 +94,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(40, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 20);
+            this.label1.Size = new System.Drawing.Size(159, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sơ Đồ Khách Sạn";
             // 
@@ -122,7 +122,7 @@
             this.btnHienTrangVsDatPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(179)))), ((int)(((byte)(66)))));
             this.btnHienTrangVsDatPhong.FlatAppearance.BorderSize = 0;
             this.btnHienTrangVsDatPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHienTrangVsDatPhong.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHienTrangVsDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHienTrangVsDatPhong.ForeColor = System.Drawing.Color.White;
             this.btnHienTrangVsDatPhong.Image = ((System.Drawing.Image)(resources.GetObject("btnHienTrangVsDatPhong.Image")));
             this.btnHienTrangVsDatPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -139,11 +139,11 @@
             this.btnQuaHan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(85)))), ((int)(((byte)(72)))));
             this.btnQuaHan.FlatAppearance.BorderSize = 0;
             this.btnQuaHan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuaHan.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuaHan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuaHan.ForeColor = System.Drawing.Color.White;
-            this.btnQuaHan.Location = new System.Drawing.Point(285, 7);
+            this.btnQuaHan.Location = new System.Drawing.Point(345, 7);
             this.btnQuaHan.Name = "btnQuaHan";
-            this.btnQuaHan.Size = new System.Drawing.Size(100, 31);
+            this.btnQuaHan.Size = new System.Drawing.Size(117, 31);
             this.btnQuaHan.TabIndex = 6;
             this.btnQuaHan.Text = "03 Quá hạn";
             this.btnQuaHan.UseVisualStyleBackColor = false;
@@ -153,9 +153,9 @@
             this.btnTongSoPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(36)))), ((int)(((byte)(170)))));
             this.btnTongSoPhong.FlatAppearance.BorderSize = 0;
             this.btnTongSoPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTongSoPhong.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTongSoPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTongSoPhong.ForeColor = System.Drawing.Color.White;
-            this.btnTongSoPhong.Location = new System.Drawing.Point(392, 7);
+            this.btnTongSoPhong.Location = new System.Drawing.Point(468, 7);
             this.btnTongSoPhong.Name = "btnTongSoPhong";
             this.btnTongSoPhong.Size = new System.Drawing.Size(117, 31);
             this.btnTongSoPhong.TabIndex = 5;
@@ -167,11 +167,11 @@
             this.btnPhongChoKhach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
             this.btnPhongChoKhach.FlatAppearance.BorderSize = 0;
             this.btnPhongChoKhach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPhongChoKhach.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhongChoKhach.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhongChoKhach.ForeColor = System.Drawing.Color.White;
-            this.btnPhongChoKhach.Location = new System.Drawing.Point(179, 7);
+            this.btnPhongChoKhach.Location = new System.Drawing.Point(232, 7);
             this.btnPhongChoKhach.Name = "btnPhongChoKhach";
-            this.btnPhongChoKhach.Size = new System.Drawing.Size(98, 31);
+            this.btnPhongChoKhach.Size = new System.Drawing.Size(107, 31);
             this.btnPhongChoKhach.TabIndex = 2;
             this.btnPhongChoKhach.Text = "03 Chờ khách";
             this.btnPhongChoKhach.UseVisualStyleBackColor = false;
@@ -181,11 +181,11 @@
             this.btnPhongDangO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(57)))), ((int)(((byte)(53)))));
             this.btnPhongDangO.FlatAppearance.BorderSize = 0;
             this.btnPhongDangO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPhongDangO.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhongDangO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhongDangO.ForeColor = System.Drawing.Color.White;
-            this.btnPhongDangO.Location = new System.Drawing.Point(94, 7);
+            this.btnPhongDangO.Location = new System.Drawing.Point(125, 7);
             this.btnPhongDangO.Name = "btnPhongDangO";
-            this.btnPhongDangO.Size = new System.Drawing.Size(78, 31);
+            this.btnPhongDangO.Size = new System.Drawing.Size(101, 31);
             this.btnPhongDangO.TabIndex = 1;
             this.btnPhongDangO.Text = "03 Đang ở";
             this.btnPhongDangO.UseVisualStyleBackColor = false;
@@ -195,11 +195,11 @@
             this.btnPhongTrong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(179)))), ((int)(((byte)(66)))));
             this.btnPhongTrong.FlatAppearance.BorderSize = 0;
             this.btnPhongTrong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPhongTrong.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhongTrong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhongTrong.ForeColor = System.Drawing.Color.White;
             this.btnPhongTrong.Location = new System.Drawing.Point(9, 7);
             this.btnPhongTrong.Name = "btnPhongTrong";
-            this.btnPhongTrong.Size = new System.Drawing.Size(78, 31);
+            this.btnPhongTrong.Size = new System.Drawing.Size(110, 31);
             this.btnPhongTrong.TabIndex = 0;
             this.btnPhongTrong.Text = "03 Trống";
             this.btnPhongTrong.UseVisualStyleBackColor = false;
@@ -221,13 +221,13 @@
             // 
             // SoDoKhachSan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 700);
             this.Controls.Add(this.flowBody);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SoDoKhachSan";
             this.Text = "SoDoKhachSan";

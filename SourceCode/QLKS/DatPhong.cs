@@ -216,7 +216,7 @@ namespace PresentationLayer
 					dtpkNgayKT.Enabled = false;
 					dtpkGioBD.Enabled = false;
 					dtpkGioBD.Text = DateTime.Now.AddMinutes(5).TimeOfDay.ToString();
-					dtpkGioKT.Text = "06:00:00 SA";
+					//dtpkGioKT.Text = "06:00:00 SA";
 					dtpkNgayKT.Value = dtpkNgayBD.Value.AddDays(1);
 					break;
 
